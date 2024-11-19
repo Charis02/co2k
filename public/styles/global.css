@@ -500,3 +500,65 @@ ol li {
     font-size: 0.8rem; /* Reduce font size for the recipe steps on very small screens */
   }
 }
+
+/* Key Aspects Section Styling */
+.key-aspects-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.key-aspects-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Key Aspects Container - Flexbox for Side by Side Layout */
+.key-aspects-container {
+  display: flex;
+  justify-content: space-around; /* Space the aspects evenly */
+  align-items: center; /* Align the items vertically in the center */
+  gap: 40px; /* Gap between each aspect */
+  flex-wrap: wrap; /* Wrap if not enough space */
+}
+
+.key-aspect {
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1; /* Make all aspects the same width */
+  max-width: 300px; /* Limit the maximum width */
+  margin: 10px; /* Margin for better spacing on smaller screens */
+  text-align: center;
+}
+
+.key-aspect h3 {
+  font-size: 1.5rem;
+  color: #007acc; /* Accent color for headings */
+  margin-bottom: 10px;
+}
+
+.key-aspect p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Media Query Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .key-aspects-title {
+    font-size: 1.6rem;
+  }
+
+  .key-aspect h3 {
+    font-size: 1.4rem;
+  }
+
+  .key-aspect p {
+    font-size: 0.9rem;
+  }
+
+  .key-aspects-container {
+    flex-direction: column; /* Stack aspects vertically on small screens */
+    align-items: center;
+  }
+}
