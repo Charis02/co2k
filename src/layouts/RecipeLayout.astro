@@ -58,8 +58,6 @@ const { title, recipe, author } = Astro.props as {
             <li>{step}</li>
           ))}
         </ol>
-        <h3>Scientific Fact</h3>
-        <p>{recipe.scienceFact}</p>
       </div>
 
       <!-- Author Profile Section -->
@@ -67,6 +65,7 @@ const { title, recipe, author } = Astro.props as {
         <img src={author.photo} alt={`Photo of ${author.name}`} class="profile-image" />
         <h2>{author.name}</h2>
         <p class="profile-note">"{author.note}"</p>
+        <p class="profile-note highlight">{recipe.scienceFact}</p>
       </div>
     </div>
   </body>

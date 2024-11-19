@@ -1,0 +1,37 @@
+---
+import RecipeLayout from '../../layouts/RecipeLayout.astro';
+
+const recipe = {
+  title: 'Chocolate Chip Cookies',
+  foodImage: '/co2k/images/chocolate-chip.png',
+  ingredients: [
+    '1 stick salted butter',
+    '¾ cup brown sugar',
+    '½ cup white sugar',
+    '1 egg',
+    '1 tsp vanilla extract', 
+    '1 ¼ cup flour',  
+    '½ tsp baking soda',
+    '½ tsp salt',
+    'Chocolate (measure with your heart)'
+  ],
+  steps: [
+    'Start by creaming together the butter and both types of sugar in a mixing bowl. Creaming is important because it creates air pockets in the butter, which will later expand in the oven and give your cookies a nice, soft texture. Make sure the butter is at room temperature to make this step easier and to get the best results.',
+    'Add in the egg and vanilla extract, and continue to mix until fully incorporated. The egg binds everything together and provides moisture, which is crucial for getting the chewy texture we want.',
+    'In a separate bowl, whisk together the flour, baking soda, and salt. Slowly fold these dry ingredients into the butter mixture until just combined. It’s important not to overmix here; overworking the dough will develop too much gluten, making your cookies tough instead of soft and chewy.',
+    'Now, add in the chocolate chips (or chunks—however much chocolate your heart desires). Stir until they are evenly distributed throughout the dough.',
+    'Cover the dough and let it chill in the fridge for at least 30 minutes. This step helps solidify the fat in the butter, which means your cookies won’t spread as much while baking, giving you that perfect chewy center. If you’re in a rush, you can skip this step, but chilling the dough makes a big difference in flavor and texture!',
+    'Preheat your oven to 375°F (190°C). While the oven is heating, scoop out your dough into balls and place them on a baking sheet lined with parchment paper. Bake for 10-12 minutes, or until the edges are golden but the center is still soft. The cookies will continue to cook as they cool, so take them out a little earlier to keep them chewy.',
+    'Allow the cookies to cool for about 5 minutes on the baking sheet before transferring them to a wire rack. This cooling time is essential to help the cookies set and achieve the perfect texture—soft and chewy in the middle with slightly crispy edges.'
+  ],
+  scienceFact: 'Baking the perfect chocolate chip cookie involves a lot of science! One key aspect is how baking soda works. Baking soda is a leavening agent that releases carbon dioxide gas when it reacts with the acidic components in the dough (such as brown sugar). This gas creates bubbles, which cause the cookies to rise and give them a light, airy texture. Also, the process of creaming the butter and sugar together adds air to the dough, which expands when heated. Additionally, chilling the dough helps control the cookie spread by solidifying the butter and allowing the flour to fully hydrate, making for a chewier texture. It’s not just baking—it’s a delicate balance of chemistry, time, and temperature that turns simple ingredients into a delicious treat!'
+};
+
+const author = {
+  name: 'Maria Doe',
+  photo: '/co2k/images/maria.png',
+  note: 'I’ve been baking for as long as I can remember, whether it be with my parents, with my younger sister/friends, or on my own. I remember baking brownies, cookies, and other sweet treats on the weekends and bringing them to middle school to share with my friends during snack time. I definitely became a more frequent baker during the quarantine of 2020 (as many others did), where I expanded my repertoire to more complicated things like pretzels and bagels. I also tested a substantial number of chocolate chip cookie recipes (>10 to this date) to perfect my own recipe (this one!). Trust me when I say you NEED to try this recipe!'
+};
+---
+
+<RecipeLayout title={recipe.title} recipe={recipe} author={author} />

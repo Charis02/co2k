@@ -2,24 +2,31 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 
 const recipes = [
+
+  {
+    title: 'Japanese Curry',
+    foodImage: '/co2k/images/japanese-curry.png',
+    authorName: 'Emmi Hayashi',
+    authorImage: '/co2k/images/emmi.png',
+    note: 'When I think of Japanese curry, I think of my grandma.',
+    url: '/co2k/recipes/japanese-curry'
+  },
   {
     title: 'Spaghetti Bolognese',
     foodImage: '/co2k/images/spaghetti.jpg',
     authorName: 'Sky Pulling',
-    authorImage: '/co2k/images/student-a.jpg',
+    authorImage: '/co2k/images/sky.png',
     note: 'This is my family’s favorite recipe!',
-    scienceFact: 'The Maillard reaction occurs when browning the meat, which enhances flavor.',
     url: '/co2k/recipes/spaghetti-bolognese'
   },
   {
-    title: 'Chocolate Cake',
-    foodImage: '/co2k/images/chocolate-cake.jpg',
-    authorName: 'John Doe',
-    authorImage: '/co2k/images/student-b.jpg',
-    note: 'This is my favorite dessert recipe!',
-    scienceFact: 'Baking powder releases carbon dioxide to make cakes rise.',
-    url: '/co2k/recipes/chocolate-cake'
-  }
+    title: 'Chocolate Chip Cookies',
+    foodImage: '/co2k/images/chocolate-chip.png',
+    authorName: 'Maria Doe',
+    authorImage: '/co2k/images/maria.png',
+    note: 'This the best chocolate chip cookie recipe. These cookies are so much fun to bake with a friend and an easy way to de-stress. The sweet dough is perfectly balanced out by rich chocolate, and they are enjoyed best straight out of the oven. I hope you all give my recipe a try!',
+    url: '/co2k/recipes/chocolate-chip'
+  },
 ];
 ---
 <DefaultLayout title="The CO2K Book">

@@ -304,6 +304,10 @@ footer p {
   font-weight: bold;
 }
 
+.highlight {
+  color: #007acc; /* Accent color for emphasis */
+}
+
 /* Subtitle Styling */
 .subtitle {
   font-size: 1rem;
@@ -319,6 +323,7 @@ footer p {
   align-items: center; /* Center both the title and the list */
   gap: 10px; /* Space between title and list */
   text-align: center; /* Center-align text within the container */
+  justify-content: center; /* Center the items within the container */
 }
 
 .ingredients-title {
@@ -335,6 +340,8 @@ footer p {
   flex-wrap: wrap; /* Allow wrapping to the next line if needed */
   justify-content: center; /* Center the items within the container */
   gap: 10px 20px; /* Space between items */
+  justify-content: center; /* Center the items within the container */
+  /* Center vertically*/
 }
 
 .ingredients-list li {
@@ -345,6 +352,9 @@ footer p {
   background-color: #f8f8f8; /* Optional background for better contrast */
   padding: 5px 10px; /* Add spacing around each item */
   border-radius: 4px; /* Rounded corners for a cleaner look */
+  
+  /* Center vertically within container*/
+
 }
 
 .ingredient-icon {
@@ -483,7 +493,7 @@ ol li {
   }
 
   .recipe-page-image {
-    width: 100%; /* Make the image take up full width */
+    width: 20%; /* Make the image take up full width */
   }
 
   ol li {

@@ -1,0 +1,34 @@
+---
+import RecipeLayout from '../../layouts/RecipeLayout.astro';
+
+const recipe = {
+  title: 'Grandma’s Japanese Curry with Sticky Rice',
+  foodImage: '/co2k/images/japanese-curry.png',
+  ingredients: [
+    'White sticky rice (crucial.)',
+    'Japanese Curry Roux Mix (Golden Curry brand is the best)',
+    'Mixed veggies (recommend carrots, potatoes, onions minimum)',
+    'Meat of choice (optional)',
+    'Veggie/Chicken/Beef Broth',
+    'Add-ins: garlic, ginger, honey, etc.'
+  ],
+  steps: [
+    'Start by preparing the sticky rice. Rinse the rice thoroughly under cold water until the water runs clear. This helps remove excess starch and keeps the rice from becoming too gummy. Then, let it soak for at least 30 minutes before cooking. Cook the rice in a rice cooker or stovetop following the ratio of 1:1.2 rice to water for perfectly tender, sticky grains.',
+    'In a large pot, heat a splash of oil over medium heat. Add the chopped onions and cook until they become translucent. Add garlic and ginger, sautéing until aromatic.',
+    "Add the chopped carrots and potatoes and stir for 2-3 minutes until slightly softened. If you're adding meat, now is the time—cook it until browned all over.",
+    'Pour in the veggie, chicken, or beef broth until the vegetables and meat are mostly covered. Bring to a gentle boil, then reduce to a simmer, letting everything cook for about 15-20 minutes or until the vegetables are tender.',
+    'Add the curry roux blocks to the pot, stirring until completely dissolved. Let the curry simmer for another 10-15 minutes until it thickens, stirring occasionally to avoid sticking.',
+    'Taste and adjust with add-ins like honey for sweetness or more ginger for warmth. You can even add a dash of soy sauce for extra umami.',
+    'Serve the curry hot over a generous portion of sticky rice. Garnish with pickled ginger or scallions, and enjoy this comforting, nostalgic dish!'
+  ],
+  scienceFact: 'Rice is a staple in Japanese cuisine, and the sticky rice used in Japanese curry is specifically grown and processed to have unique properties. Rice plants (Oryza sativa) are typically grown in flooded paddies, which helps control weeds and pests naturally, allowing the rice to grow without much interference. The "sticky" texture comes from the high amount of amylopectin starch in japonica rice, which is different from long-grain varieties like basmati or jasmine. During cooking, the water interacts with the amylopectin, causing the rice to stick together. This stickiness not only makes it easier to eat with chopsticks but also allows it to absorb the curry sauce perfectly, creating that satisfying, cohesive bite. It’s fascinating how something as simple as growing rice in wet fields impacts the way we enjoy a meal!'
+};
+
+const author = {
+  name: 'Emmi Hayashi',
+  photo: '/co2k/images/emmi.png',
+  note: 'When I think of Japanese curry, I think of my grandma (who I call Baba, short for Obachan, meaning "grandma" in Japanese). We are incredibly close because she basically raised me from ages 2-6 when my family and I lived on a military base in Japan. My grandma and I spent almost every day together, which meant I was blessed with her AMAZING traditional Japanese cooking. Since I have allergies, Baba made sure almost all my meals were safe and delicious. My grandma’s signature dishes included niku soba, curry udon, steamed Japanese yam (satsumaimo), and miso soup with soft tofu. Just writing this makes my mouth water and reminds me of how much I miss my grandparents, who are still in Japan. While I am only a quarter Japanese (¼ Japanese, ¼ Filipino, ½ American White), my close bond with my grandma has always made me incredibly grateful and proud of my Japanese heritage.'
+};
+---
+
+<RecipeLayout title={recipe.title} recipe={recipe} author={author} />
