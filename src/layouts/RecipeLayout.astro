@@ -2,12 +2,26 @@
 const { title, recipe, author } = Astro.props;
 import Header from '../components/Header.astro';
 
-/**
- * Props:
- * - title: The page title
- * - recipe: Contains recipe information (title, foodImage, ingredients, steps, scienceFact)
- * - author: Contains author details (name, photo, and personal note)
- */
+
+interface Recipe {
+  title: string;
+  foodImage: string;
+  ingredients: string[];
+  steps: string[];
+  scienceFact: string;
+}
+
+interface Author {
+  name: string;
+  photo: string;
+  note: string;
+}
+
+const { title, recipe, author } = Astro.props as {
+  title: string;
+  recipe: Recipe;
+  author: Author;
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +57,7 @@ import Header from '../components/Header.astro';
         <h2>Steps</h2>
         <ol>
           {recipe.steps.map((step, index) => (
-            <li key={index}>{step}</li>
+            <li>{step}</li>
           ))}
         </ol>
         <h3>Scientific Fact</h3>
