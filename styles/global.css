@@ -1,0 +1,361 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdfdfd; /* Off-white */
+  color: #333; /* Dark text */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+
+a {
+  /* black regardless of theme */
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005f99; /* Darker accent blue */
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+/* Container for Centered Content */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  height: 100%;
+  max-width: 100%;
+}
+
+/* Card Component */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout Flexbox for Full Page */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.layout > .left {
+  width: 70%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.recipe-content { /* Have image and content side by side */
+  display: flex;
+  gap: 20px;
+}
+
+.recipe-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.layout > .right {
+  width: 30%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-left: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Profile Section */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-note {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-page-image {
+  width: 30%;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styles */
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Ordered List for Steps */
+ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Buttons and Links */
+button, .button {
+  background-color: #007acc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+  background-color: #005f99;
+}
+
+button:disabled, .button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Footer (if needed) */
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  gap: 40px; /* Spacing between cards */
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align to the top */
+  flex-grow: 1; /* Allow container to expand */
+  width: 100%; /* Ensure full width */
+  height: 100%; /* Ensure full height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Card Styles */
+/* Card Wrapper */
+.card {
+  perspective: 1000px; /* Enables 3D perspective */
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+}
+
+/* Inner Container */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  transition: transform 0.8s; /* Smooth flip transition */
+}
+
+/* Flip on Hover */
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Rotate the card 180 degrees */
+}
+
+/* Front and Back Faces */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back when facing front */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures content stays within the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+}
+
+/* Front Face */
+.card-front {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Back Face */
+.card-back {
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg); /* Rotate the back face to be hidden initially */
+}
+
+/* Author Image */
+.author-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* 1 card per row on small screens */
+  }
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background for header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Title Styling */
+.title {
+  font-family: 'Georgia', serif; /* Elegant font for the title */
+  font-size: 2.5rem; /* Large title */
+  line-height: 1.2;
+  color: #333; /* Dark text color */
+  margin: 0;
+}
+
+.title-line {
+  display: block;
+}
+
+.title-line.highlight {
+  color: #007acc; /* Accent color for emphasis */
+  font-weight: bold;
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555; /* Slightly lighter text for subtitle */
+  margin-top: 10px;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+  display: flex;
+  flex-direction: column; /* Stack title and list vertically */
+  align-items: center; /* Center both the title and the list */
+  gap: 10px; /* Space between title and list */
+  text-align: center; /* Center-align text within the container */
+}
+
+.ingredients-title {
+  font-size: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+/* Ingredients List */
+.ingredients-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Inline layout for the list */
+  flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+  justify-content: center; /* Center the items within the container */
+  gap: 10px 20px; /* Space between items */
+}
+
+.ingredients-list li {
+  display: flex; /* Align icon and text horizontally */
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  font-size: 1rem; /* Font size for ingredients */
+  background-color: #f8f8f8; /* Optional background for better contrast */
+  padding: 5px 10px; /* Add spacing around each item */
+  border-radius: 4px; /* Rounded corners for a cleaner look */
+}
+
+.ingredient-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #007acc; /* Accent color */
+  color: white;
+  border-radius: 50%; /* Circular icon */
+  font-size: 0.8rem; /* Adjust font size for the icon */
+  text-align: center;
+  line-height: 24px; /* Center text vertically */
+  font-weight: bold;
+}

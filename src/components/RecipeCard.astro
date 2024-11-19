@@ -1,0 +1,12 @@
+---
+const { recipe } = Astro.props;
+---
+<div class="card">
+  <h2>{recipe.title}</h2>
+  <img src={recipe.foodImage} alt={recipe.title} style="width: 100%; border-radius: 8px;" />
+  <p><strong>By:</strong> {recipe.authorName}</p>
+  <img src={recipe.authorImage} alt={`Photo of ${recipe.authorName}`} style="width: 50px; border-radius: 50%;" />
+  <p><em>Why this matters: {recipe.note}</em></p>
+  <h3>Scientific Fact</h3>
+  <p>{recipe.scienceFact}</p>
+</div>

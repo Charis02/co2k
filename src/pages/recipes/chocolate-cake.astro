@@ -1,0 +1,41 @@
+---
+import RecipeLayout from '../../layouts/RecipeLayout.astro';
+
+const recipe = {
+  title: 'Chocolate Cake',
+  foodImage: '/images/chocolate-cake.jpg',
+  ingredients: [
+    '1 pound of ground beef or pork',
+    '1 onion, finely chopped',
+    '2 cloves of garlic, minced',
+    '1 carrot, grated',
+    '1 celery stick, finely chopped',
+    '1 can (14 oz) of diced tomatoes',
+    '2 tablespoons of tomato paste',
+    '1 cup of beef stock',
+    '1/2 cup of milk',
+    '2 teaspoons of dried oregano or Italian seasoning',
+    'Salt and pepper to taste',
+    '12 oz of spaghetti',
+    'Fresh basil leaves and Parmesan cheese for garnish'
+  ],
+  steps: [
+    'In a large pan, heat a splash of olive oil over medium heat. Add the chopped onions, garlic, carrot, and celery. Cook gently for about 5 minutes until the veggies are soft and aromatic.',
+    'Increase the heat to medium-high and add the ground beef. Stir and cook until the meat is browned all over. Don’t rush this step – this is where the Maillard magic happens!',
+    'Stir in the tomato paste, diced tomatoes, beef stock, and dried oregano. Reduce the heat to low and let the sauce simmer uncovered for at least 30 minutes. The longer you simmer, the better the flavors meld!',
+    'Meanwhile, cook the spaghetti in a large pot of boiling salted water according to the package instructions. Make sure it’s al dente – firm to the bite!',
+    'As the sauce finishes cooking, stir in the milk. This little secret ingredient adds a creamy balance to the acidity of the tomatoes.',
+    'Drain the spaghetti and toss it with the sauce until it’s coated in that delicious goodness.',
+    'Serve hot, garnished with fresh basil leaves and a generous sprinkle of Parmesan cheese.'
+  ],
+  scienceFact: 'The secret to a delicious spaghetti Bolognese is the Maillard reaction. When browning the meat, it creates hundreds of new flavor compounds that give the sauce its irresistible richness.'
+};
+
+const author = {
+  name: 'John Doe',
+  photo: '/images/student-b.jpg',
+  note: 'This is my family’s favorite recipe! We cook it every Friday night, and it feels like a warm, edible hug after a long week.'
+};
+---
+
+<RecipeLayout title={recipe.title} recipe={recipe} author={author} />

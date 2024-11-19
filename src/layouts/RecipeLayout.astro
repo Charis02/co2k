@@ -1,0 +1,61 @@
+---
+const { title, recipe, author } = Astro.props;
+import Header from '../components/Header.astro';
+
+/**
+ * Props:
+ * - title: The page title
+ * - recipe: Contains recipe information (title, foodImage, ingredients, steps, scienceFact)
+ * - author: Contains author details (name, photo, and personal note)
+ */
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title || 'Recipe Page'}</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <Header></Header>
+    <div class="layout">
+      <!-- Recipe Section -->
+      <div class="left">
+          <div class="title">
+          <!-- Recipe Title centered -->
+          <div class="title-line highlight recipe-title">{recipe.title}</div>
+          </div>
+          <div class=recipe-content>
+          <img src={recipe.foodImage} alt={recipe.title} class="recipe-page-image" />
+          <div class="ingredients-section">
+            <h2 class="ingredients-title">Ingredients</h2>
+            <ul class="ingredients-list">
+              {recipe.ingredients.map(ingredient => (
+                <li>
+                  <span class="ingredient-icon">✔</span>
+                  {ingredient}
+                </li>
+              ))}
+            </ul>
+          </div>
+      </div>
+        <h2>Steps</h2>
+        <ol>
+          {recipe.steps.map((step, index) => (
+            <li key={index}>{step}</li>
+          ))}
+        </ol>
+        <h3>Scientific Fact</h3>
+        <p>{recipe.scienceFact}</p>
+      </div>
+
+      <!-- Author Profile Section -->
+      <div class="right">
+        <img src={author.photo} alt={`Photo of ${author.name}`} class="profile-image" />
+        <h2>{author.name}</h2>
+        <p class="profile-note">"{author.note}"</p>
+      </div>
+    </div>
+  </body>
+</html>
