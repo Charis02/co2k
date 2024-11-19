@@ -15,5 +15,7 @@ export default {
         },
       },
     },
+    site: 'https://charis02.github.io',
+    base: 'co2k',
   };
   
