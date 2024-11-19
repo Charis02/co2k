@@ -359,3 +359,134 @@ footer p {
   line-height: 24px; /* Center text vertically */
   font-weight: bold;
 }
+
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdfdfd; /* Off-white */
+  color: #333; /* Dark text */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  /* black regardless of theme */
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005f99; /* Darker accent blue */
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+/* Recipe Content - Larger Screens */
+.recipe-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Ingredients Section */
+.ingredients-title {
+  font-size: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+/* Ingredients List */
+.ingredients-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Inline layout for the list */
+  flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+  justify-content: center; /* Center the items within the container */
+  gap: 10px 20px; /* Space between items */
+}
+
+.ingredients-list li {
+  display: flex; /* Align icon and text horizontally */
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  font-size: 1rem; /* Font size for ingredients */
+  background-color: #f8f8f8; /* Optional background for better contrast */
+  padding: 5px 10px; /* Add spacing around each item */
+  border-radius: 4px; /* Rounded corners for a cleaner look */
+}
+
+/* Recipe Steps */
+ol li {
+  margin-bottom: 10px;
+  font-size: 1rem; /* General font size for steps */
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .recipe-title {
+    font-size: 1.8rem; /* Reduce font size for the recipe title */
+  }
+
+  .ingredients-title {
+    font-size: 1.4rem; /* Reduce the font size for the ingredients title */
+  }
+
+  .ingredients-list li {
+    font-size: 0.9rem; /* Slightly reduce the font size for ingredients */
+    padding: 4px 8px; /* Reduce padding */
+  }
+
+  .recipe-page-image {
+    width: 50%; /* Make image larger for smaller screens */
+  }
+
+  ol li {
+    font-size: 0.9rem; /* Reduce font size for steps */
+  }
+
+  .layout {
+    flex-direction: column; /* Stack layout vertically on smaller screens */
+    padding: 10px;
+  }
+
+  .layout > .left, .layout > .right {
+    width: 100%; /* Full-width layout sections */
+    padding: 10px; /* Reduced padding */
+  }
+
+  .right {
+    margin-top: 20px; /* Add margin between stacked sections */
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-title {
+    font-size: 1.5rem; /* Further reduce title size for very small screens */
+  }
+
+  .ingredients-title {
+    font-size: 1.2rem; /* Smaller font for the ingredients title */
+  }
+
+  .ingredients-list li {
+    font-size: 0.8rem; /* Make ingredients smaller for phones */
+    padding: 3px 6px; /* Less padding for smaller screens */
+  }
+
+  .profile-note {
+    font-size: 0.8rem; /* Reduce the font size for the profile note */
+  }
+
+  .recipe-page-image {
+    width: 100%; /* Make the image take up full width */
+  }
+
+  ol li {
+    font-size: 0.8rem; /* Reduce font size for the recipe steps on very small screens */
+  }
+}
