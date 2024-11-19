@@ -12,6 +12,13 @@ const recipes = [
     url: '/co2k/recipes/japanese-curry'
   },
   {
+    title: 'Baklava',
+    foodImage: '/co2k/images/baklava.png',
+    authorName: 'Abdullah Abdullah',
+    authorImage: '/co2k/images/abdullah.png',
+    note: 'A family tradition for as long as I can remember.',
+    url: '/co2k/recipes/baklava'
+  },{
     title: 'Spaghetti Bolognese',
     foodImage: '/co2k/images/spaghetti.jpg',
     authorName: 'Sky Pulling',
@@ -31,26 +38,27 @@ const recipes = [
 ---
 <DefaultLayout title="The CO2K Book">
   <div class="card-container">
-    {recipes.map(recipe => (
-      <a href={recipe.url} class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src={recipe.foodImage} alt={recipe.title} class="recipe-image" />
-            <h2>{recipe.title}</h2>
-          </div>
-          <div class="card-back">
-            <img src={recipe.authorImage} alt={`Photo of ${recipe.authorName}`} class="author-image" />
-            <p><strong>{recipe.authorName}</strong></p>
-            <p>{recipe.note}</p>
-          </div>
+  {recipes.map(recipe => (
+    <a href={recipe.url} class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src={recipe.foodImage} alt={recipe.title} class="recipe-image" />
+          <h2>{recipe.title}</h2>
         </div>
-      </a>
-    ))}
-  </div>
+        <div class="card-back">
+          <img src={recipe.authorImage} alt={`Photo of ${recipe.authorName}`} class="author-image" />
+          <p><strong>{recipe.authorName}</strong></p>
+          <p>{recipe.note}</p>
+        </div>
+      </div>
+    </a>
+  ))}
+</div>
 
-  </div>
+
+</DefaultLayout>
    <div class="key-aspects-section">
-    <h2 class="key-aspects-title">Participants who join CO2K experience</h2>
+    <h2 class="key-aspects-title">Participants who join the after-school CO2K experience find</h2>
     <div class="key-aspects-container">
       <div class="key-aspect">
         <h3>Community</h3>
@@ -65,4 +73,4 @@ const recipes = [
         <p>Experimenting with recipes fosters creativity, problem-solving, and interdisciplinary skills that make learning both fun and impactful.</p>
       </div>
     </div>
-</DefaultLayout>
+  </div>

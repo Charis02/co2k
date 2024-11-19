@@ -194,6 +194,7 @@ footer p {
   height: 100%; /* Ensure full height */
   padding: 20px;
   box-sizing: border-box;
+  padding-bottom: 10px;
 }
 
 
@@ -515,6 +516,10 @@ ol li {
 .key-aspects-section {
   margin-top: 40px;
   text-align: center;
+  max-width: 100%;
+  
+  background-color: #f8f8f8; /* Light background for header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .key-aspects-title {
