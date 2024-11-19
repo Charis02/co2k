@@ -450,9 +450,14 @@ ol li {
     font-size: 0.9rem; /* Slightly reduce the font size for ingredients */
     padding: 4px 8px; /* Reduce padding */
   }
-
+  
   .recipe-page-image {
-    width: 50%; /* Make image larger for smaller screens */
+    width: 50%; /* Adjusts the width */
+    height: auto; /* Keeps height proportional to width */
+    max-width: 100%; /* Ensures the image does not exceed its container */
+    border-radius: 8px; /* Rounded corners for aesthetic */
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   ol li {
