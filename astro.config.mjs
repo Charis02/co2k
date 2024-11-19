@@ -12,6 +12,6 @@ export default defineConfig({
       },
     },
   },
-  site: 'https://charis02.github.io/co2k',
+  site: 'https://charis02.github.io',
   base: '/co2k',
 });
