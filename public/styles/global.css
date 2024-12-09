@@ -33,14 +33,64 @@ h1, h2, h3 {
 }
 
 /* Card Component */
+/* Card Container */
+/* Card Container */
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 20px;
-  background: white;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text alignment */
 }
+
+/* Circular Image */
+.card img {
+  width: 200px; /* Adjust size of the image */
+  height: 200px; /* Match height to width */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image scales properly */
+  margin-bottom: 10px; /* Space between the image and text */
+  border: none; /* Remove any border if applied */
+}
+
+.card-back img {
+  width: 100px;
+  height: 100px; /*smaller */
+}
+
+
+.brochure{
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text alignment */
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.brochure-link {
+  display: flex;
+  flex-direction: row; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text alignment */
+  gap: 40px;
+  width: 40%;
+  justify-content: center;
+}
+
+.brochure-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* Card Text */
+.card p {
+  font-size: 1rem; /* Text size */
+  color: #333; /* Text color */
+  margin: 0; /* Remove default margin */
+}
+
 
 /* Layout Flexbox for Full Page */
 .layout {
