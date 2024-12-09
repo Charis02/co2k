@@ -1,8 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+
 
 export default defineConfig({
-  integrations: [],
+  integrations: [react()],
   vite: {
     css: {
       preprocessorOptions: {
@@ -15,3 +17,4 @@ export default defineConfig({
   site: 'https://charis02.github.io',
   base: '/co2k',
 });
+

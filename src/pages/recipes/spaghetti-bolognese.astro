@@ -19,7 +19,7 @@ const recipe = {
     '12 oz of spaghetti',
     'Fresh basil leaves and Parmesan cheese for garnish'
   ],
-  steps: [
+  humanSteps: [
     'In a large pan, heat a splash of olive oil over medium heat. Add the chopped onions, garlic, carrot, and celery. Cook gently for about 5 minutes until the veggies are soft and aromatic.',
     'Increase the heat to medium-high and add the ground beef. Stir and cook until the meat is browned all over. Don’t rush this step – this is where the Maillard magic happens!',
     'Stir in the tomato paste, diced tomatoes, beef stock, and dried oregano. Reduce the heat to low and let the sauce simmer uncovered for at least 30 minutes. The longer you simmer, the better the flavors meld!',
@@ -28,12 +28,26 @@ const recipe = {
     'Drain the spaghetti and toss it with the sauce until it’s coated in that delicious goodness.',
     'Serve hot, garnished with fresh basil leaves and a generous sprinkle of Parmesan cheese.'
   ],
+  algorithmSteps: [
+  'heat_oil("large_pan", medium)',
+  'for_each("vegetable", ["chopped_onions", "minced_garlic", "grated_carrot", "chopped_celery"]) { add_to_pan("vegetable", "sauté_for", 5) }',
+  'increase_heat("large_pan", medium_high)',
+  'add_to_pan("ground_beef", "cook_until_browned")',
+  'add_to_pan(["tomato_paste", "diced_tomatoes", "beef_stock", "dried_oregano"])',
+  'simmer("large_pan", 30, "low_heat", "uncovered")',
+  'while ("spaghetti_cooking") { boil_water("large_pot", "add_salt") }',
+  'add_to_pot("spaghetti", "cook_until_al_dente")',
+  'stir_in("large_pan", "milk", "combine_with_sauce")',
+  'drain_pasta("spaghetti", "large_pot")',
+  'toss_pasta_with_sauce("spaghetti", "large_pan")',
+  'serve("spaghetti_bolognese", ["garnish_basil", "parmesan_cheese"])'
+  ],
   scienceFact: 'The Maillard reaction is what makes spaghetti Bolognese taste so amazing, and it’s actually a really cool chemical process. When you cook the meat at high heat, the proteins (made up of amino acids) and the natural sugars in the meat start to react together. This reaction is called the Maillard reaction, and it’s what makes the meat turn that perfect brown color. It creates a ton of different flavor compounds—literally hundreds of them. That’s why well-browned meat tastes richer and more complex compared to just boiling it. It’s the same reaction that makes toast smell so good, or gives a crust to seared steak. In short, it’s all about high heat, dry surface, and enough time for magic to happen, turning the meat into a flavor bomb.'
 };
 
 const author = {
-  name: 'Sky Pulling',
-  photo: '/co2k/images/sky.png',
+  name: 'Beatrice Casartelli',
+  photo: '/co2k/images/beatrice.png',
   note: 'This recipe is more than just food—it’s a symbol of my family coming together. Every Friday night, we gather around the kitchen, sharing stories and laughter while this dish fills our home with warmth. It’s like a comforting hug that brings us closer after the ups and downs of the week.'
 };
 ---

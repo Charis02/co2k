@@ -1,11 +1,13 @@
 ---
 import Header from '../components/Header.astro';
+import ToggleSteps from '../components/ToggleSteps.jsx';
 
 interface Recipe {
   title: string;
   foodImage: string;
   ingredients: string[];
-  steps: string[];
+  humanSteps: string[];
+  algorithmSteps: string[];
   scienceFact: string;
 }
 
@@ -34,16 +36,15 @@ const { title, recipe, author } = Astro.props as {
     <div class="layout">
       <!-- Recipe Section -->
       <div class="left">
-          <div class="title">
-          <!-- Recipe Title centered -->
+        <div class="title">
           <div class="title-line highlight recipe-title">{recipe.title}</div>
-          </div>
-          <div class=recipe-content>
+        </div>
+        <div class="recipe-content">
           <img src={recipe.foodImage} alt={recipe.title} class="recipe-page-image" />
           <div class="ingredients-section">
             <h2 class="ingredients-title">Ingredients</h2>
             <ul class="ingredients-list">
-              {recipe.ingredients.map(ingredient => (
+              {recipe.ingredients.map((ingredient) => (
                 <li>
                   <span class="ingredient-icon">✔</span>
                   {ingredient}
@@ -51,13 +52,13 @@ const { title, recipe, author } = Astro.props as {
               ))}
             </ul>
           </div>
-      </div>
-        <h2>Steps</h2>
-        <ol>
-          {recipe.steps.map((step, index) => (
-            <li>{step}</li>
-          ))}
-        </ol>
+        </div>
+        <h2>Follow these steps to complete the recipe</h2>
+        <ToggleSteps
+          humanSteps={recipe.humanSteps}
+          algorithmSteps={recipe.algorithmSteps}
+          client:load
+        />
       </div>
 
       <!-- Author Profile Section -->

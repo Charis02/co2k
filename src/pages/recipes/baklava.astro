@@ -15,7 +15,7 @@ const recipe = {
     '1 tsp ground cinnamon',
     '½ tsp ground cloves'
   ],
-  steps: [
+  humanSteps: [
     'Preheat your oven to 350°F (175°C). Grease a 9x13-inch baking dish with melted butter to prevent the baklava from sticking.',
     'In a mixing bowl, combine the chopped nuts, cinnamon, and cloves. This mixture will create the layers of nutty goodness in your baklava.',
     'Unroll the phyllo dough and cut it to fit your baking dish, covering the unused sheets with a damp towel to prevent them from drying out.',
@@ -26,8 +26,21 @@ const recipe = {
     'While the baklava is baking, prepare the syrup by combining the sugar, water, and honey in a saucepan over medium heat. Bring the mixture to a boil, reduce the heat, and simmer for 10 minutes. Stir in the vanilla extract and let it cool slightly.',
     'Once the baklava is baked, immediately pour the warm syrup evenly over the hot baklava, ensuring it seeps into all the layers. Let it cool completely before serving, ideally overnight to allow the flavors to meld.'
   ],
+  algorithmSteps: [
+  'set_variable("oven_temperature", 350)',
+  'mix_ingredients(["chopped_nuts", "cinnamon", "cloves"], "bowl")',
+  'prepare_phyllo("trim_to_size", "keep_unused_dough_moist")',
+  'layer_sheets(10, "phyllo", "brush_with_butter")',
+  'alternate_layers(["phyllo", "nut_mixture"], 5, "brush_with_butter")',
+  'cut_shapes("diamond", "phyllo_layers")',
+  'bake("oven_temperature", "45-50_minutes", "golden_crisp")',
+  'combine(["sugar", "water", "honey", "vanilla"], "simmer", "create_syrup")',
+  'pour_syrup("hot_baklava", "evenly")',
+  'cool("baklava", "overnight")'
+],
   scienceFact: 'Baklava’s flaky texture comes from the science of layering and baking phyllo dough. Each thin sheet of phyllo is separated by butter, creating air pockets that expand during baking, resulting in the crisp, delicate texture. The syrup, added after baking, absorbs into the layers, balancing the crispness with sweetness. The use of nuts adds not just flavor but texture and a touch of natural oils, which interact with the butter and syrup to create a melt-in-your-mouth experience.'
 };
+
 
 const author = {
   name: 'Abdullah Abdullah',

@@ -15,7 +15,21 @@ const recipe = {
     '½ tsp salt',
     'Chocolate (measure with your heart)'
   ],
-  steps: [
+  algorithmSteps: [
+  'set_variable("butter", room_temperature)',
+  'cream_together(["butter", "brown_sugar", "white_sugar"], "mixing_bowl")',
+  'add_to_mixture(["egg", "vanilla_extract"], "mixing_bowl")',
+  'combine(["flour", "baking_soda", "salt"], "dry_ingredients")',
+  'fold_ingredients("dry_ingredients", "mixing_bowl", "stop_when_combined")',
+  'if ("chocolate_chips_present") { for_each("chip", chocolate_chips) { add_to_dough("chip", "mixing_bowl") } }',
+  'chill_dough("mixing_bowl", 30)',
+  'preheat_oven(375)',
+  'for_each("scoop", range(1, number_of_scoops)) { scoop_dough("dough_balls", "baking_sheet") }',
+  'bake("baking_sheet", 375, 10)',
+  'cool_on_baking_sheet("cookies", 5)',
+  'transfer_to_rack("cookies", "wire_cooling_rack")'
+  ],
+  humanSteps: [
     'Start by creaming together the butter and both types of sugar in a mixing bowl. Creaming is important because it creates air pockets in the butter, which will later expand in the oven and give your cookies a nice, soft texture. Make sure the butter is at room temperature to make this step easier and to get the best results.',
     'Add in the egg and vanilla extract, and continue to mix until fully incorporated. The egg binds everything together and provides moisture, which is crucial for getting the chewy texture we want.',
     'In a separate bowl, whisk together the flour, baking soda, and salt. Slowly fold these dry ingredients into the butter mixture until just combined. It’s important not to overmix here; overworking the dough will develop too much gluten, making your cookies tough instead of soft and chewy.',
